@@ -10,6 +10,7 @@ html {
 
 .page {
   display: flex;
+  justify-content: center;
   align-items: center;
   inline-size: 1200px;
   block-size: 100%;
@@ -82,7 +83,7 @@ ol {
   margin-block-end: 5px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21,6px;
+  line-height: 21.6px;
 }
 
 .search-form__label {
@@ -91,6 +92,10 @@ ol {
   gap: 5px;
   width: fit-content;
   cursor: pointer;
+}
+
+.search-form__label:active {
+  outline: none;
 }
 
 .search-form__label:focus {
@@ -102,13 +107,14 @@ ol {
 } 
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
 }
 
 .search-form__textfield {
   min-inline-size: 225px;
   min-block-size: 27px;
-  color: #fff;
+  color: currentColor;
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
@@ -123,7 +129,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-color: #fff;
+  border-color: currentColor;
 }
 
 .search-form__checkbox-list {
@@ -177,6 +183,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px; 
 }
 
 .content__details {
@@ -230,6 +237,7 @@ ol {
 .content__card-link:active {
   background-color: #545050;
 }
+
 .content__card-link_current {
   background-color: #545050;
 }
